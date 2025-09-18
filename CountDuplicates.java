@@ -39,6 +39,7 @@ public class CountDuplicates {
 				System.out.println(List[i]+" appears " + count + " times");
 			}
 			count = 0;
-		}	
+		}
+		io.close();
 	}
 }
