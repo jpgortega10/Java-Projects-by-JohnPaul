@@ -24,7 +24,7 @@ public class TwoSumProblem {
 		
 		for(int i=0;i<amountOfNumbers;i++)
 		{
-			for(int j=1;j<amountOfNumbers;j++)
+			for(int j=i+1;j<amountOfNumbers;j++)
 			{
 				tempSum = userNumbers[i]+userNumbers[j];
 				
@@ -41,9 +41,10 @@ public class TwoSumProblem {
 			if(match)
 				break;
 		}
-		
-		System.out.println("Numbers found at indicies " + markerOne + " and " + markerTwo + " (" + numberOne + " + " + numberTwo + ") = " + targetSum);
-				
+		if(match)
+			System.out.println("Numbers found at indicies " + markerOne + " and " + markerTwo + " (" + numberOne + " + " + numberTwo + ") = " + targetSum);
+		else
+			System.out.println("No pair found for target");
 		
 		io.close();
 	}
