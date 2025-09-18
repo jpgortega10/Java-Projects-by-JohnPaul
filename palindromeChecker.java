@@ -7,15 +7,23 @@ public class palindromeChecker {
 		
 		System.out.println("Enter a word please:");
 		String word = io.nextLine();
+		
+		boolean palindrome = true;
+		
 		for(int i =0;i<word.length();i++)
 		{
-			for(int j = word.length();j>0;j++)
-				if(word.charAt(i)==word.charAt(j))
+				if(word.charAt(i)!=word.charAt(word.length()-1-i))
 				{
-					System.out.println("palindrome");
+					palindrome = false;
 					break;
 				}
+				else
+					palindrome = true;
 		}
+		if(palindrome)
+			System.out.println("This word is a palindrome");
+		else
+			System.out.println("This word is not a palindrome");
 		
 		
 		
