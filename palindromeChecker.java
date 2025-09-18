@@ -9,26 +9,20 @@ public class palindromeChecker {
 		String word = io.nextLine();
 		
 		boolean palindrome = true;
+		word = word.toLowerCase();
 		
 		for(int i =0;i<word.length();i++)
-		{
 				if(word.charAt(i)!=word.charAt(word.length()-1-i))
 				{
 					palindrome = false;
 					break;
 				}
-				else
-					palindrome = true;
-		}
+		
 		if(palindrome)
 			System.out.println("This word is a palindrome");
 		else
 			System.out.println("This word is not a palindrome");
 		
-		
-		
-		
-
+		io.close();
 	}
-
 }
