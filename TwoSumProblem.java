@@ -11,7 +11,7 @@ public class TwoSumProblem {
 		int targetSum = 0;
 		
 		//Gets all the numbers the user wants to input
-		System.out.print("Enter" + amountOfNumbers + "numbers: ");
+		System.out.print("Enter " + amountOfNumbers + " numbers: ");
 		for(int i = 0;i<amountOfNumbers;i++)
 			userNumbers[i] = io.nextInt();
 		
@@ -19,11 +19,33 @@ public class TwoSumProblem {
 		System.out.print("Enter target: ");
 		targetSum = io.nextInt();
 		
+		int tempSum=0,markerOne=0,markerTwo=0,numberOne=0,numberTwo = 0;
+		boolean match = false;
 		
+		for(int i=0;i<amountOfNumbers;i++)
+		{
+			for(int j=1;j<amountOfNumbers;j++)
+			{
+				tempSum = userNumbers[i]+userNumbers[j];
+				
+				if(tempSum==targetSum)
+					{
+						markerOne=i;
+						markerTwo=j;
+						numberOne=userNumbers[i];
+						numberTwo=userNumbers[j];
+						match = true;
+						break;
+					}
+			}
+			if(match)
+				break;
+		}
 		
-			
+		System.out.println("Numbers found at indicies " + markerOne + " and " + markerTwo + " (" + numberOne + " + " + numberTwo + ") = " + targetSum);
+				
 		
-
+		io.close();
 	}
 
 }
