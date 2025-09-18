@@ -1,8 +1,6 @@
 //Array Reversal
 //reverse an input from the user by utilizing an array
-
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class ArrayReversal {
 
