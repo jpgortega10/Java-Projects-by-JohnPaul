@@ -1,3 +1,6 @@
+// This is a mini practice for my Java skills. 
+// This is a calculator project.
+
 import java.util.Scanner;
 
 public class Main {
